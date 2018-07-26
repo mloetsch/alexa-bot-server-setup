@@ -1,5 +1,5 @@
 # Alexa Demo Skill with node.js
-Trying to set up a useful alexa skill with node.js without lambda.
+simple development server setup for amazon skills without using aws lambda. sends back "Hello World" to Alexa.
 ## Installation
 clone this repository:
 `$ git clone https://github.com/xhaldos/node-alexa-skill-demo.git`
