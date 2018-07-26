@@ -1,0 +1,25 @@
+{
+  "name": "alexa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon bin/dev",
+    "clean": "rm -rf ./dist",
+    "build": "yarn clean && mkdir dist && ./node_modules/.bin/babel ./src --out-dir dist",
+    "produce": "yarn build && node bin/production",
+    "serve": "node bin/production"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.2.0",
+    "nodemon": "^1.18.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "global": "^4.3.2",
+    "http": "^0.0.0"
+  }
+}
