@@ -9,11 +9,12 @@ build package:
 
 `$ yarn`
 
+set up a custom alexa skill at the [alexa console](https://developer.amazon.com/alexa), make sure to define at least one Intent.
+
 [optional] download and setup [ngrok.io](https://dashboard.ngrok.com/get-started).
 
 `$ ./ngrok authtoken INSERT_AUTHTOKEN`
 
-set up a custom alexa skill at the [alexa console](https://developer.amazon.com/alexa), make sure to define at least one Intent.
 
 ## Usage
 start your dev server:
