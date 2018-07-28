@@ -9,7 +9,7 @@ build package:
 
 `$ yarn`
 
-download and setup [ngrok.io](https://dashboard.ngrok.com/get-started)
+[optional] download and setup [ngrok.io](https://dashboard.ngrok.com/get-started).
 
 `$ ./ngrok authtoken INSERT_AUTHTOKEN`
 
