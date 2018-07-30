@@ -8,9 +8,10 @@ import {
     SessionEndedRequestHandler,
     ErrorHandler
 } from './intents/default';
-import {HelloWorldHandler} from './intents/hello';
-const app = express();
+import {HelloWorldHandler} from './intents/helloworld';
+import {GetLogoHandler} from './intents/getlogo';
 
+const app = express();
 let skill;
 
 // local development endpoint setup:
@@ -22,6 +23,7 @@ app.post('/', function (req, res) {
         skill = Alexa.SkillBuilders.custom()
             .addRequestHandlers(
                 HelloWorldHandler,
+                GetLogoHandler,
                 LaunchRequestHandler,
                 HelpIntentHandler,
                 CancelAndStopIntentHandler,
