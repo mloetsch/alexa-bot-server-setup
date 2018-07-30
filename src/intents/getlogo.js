@@ -1,24 +1,5 @@
 let url = 'https://www.limesoda.com/typo3conf/ext/ls_template/Resources/Public/Images/LimeSoda-Logo-Facebook.jpg';
 
-export const GetLogoHandler = {
-    canHandle(handlerInput) {
-        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-            && handlerInput.requestEnvelope.request.intent.name === 'GetLogoIntent';
-    },
-    handle(handlerInput) {
-        const speechText = 'Here is your logo!';
-        return handlerInput.responseBuilder
-            .speak(speechText)
-            .withStandardCard('Logo', 'Here is the Limesoda Logo:', url, url)
-            .getResponse();
-    },
-};
-
-
-/* alternatively return a JSON object like the "testResponse" below directly from the handle function above inside the Handler
-    see https://developer.amazon.com/de/docs/custom-skills/include-a-card-in-your-skills-response.html
-    and https://ask-sdk-for-nodejs.readthedocs.io/en/latest/Response-Building.html?highlight=withStandardCard for help about building responses
-*/
 let testResponse = {
     "outputSpeech": {
         "type": "PlainText",
@@ -35,3 +16,28 @@ let testResponse = {
     }
 };
 
+export const GetLogoHandler = {
+    canHandle(handlerInput) {
+        return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+            && handlerInput.requestEnvelope.request.intent.name === 'GetLogoIntent';
+    },
+    handle() {
+        return testResponse;
+    },
+};
+
+
+/* alternatively return a JSON object like the "testResponse" below directly from the handle function above inside the Handler
+ see https://developer.amazon.com/de/docs/custom-skills/include-a-card-in-your-skills-response.html
+ and https://ask-sdk-for-nodejs.readthedocs.io/en/latest/Response-Building.html?highlight=withStandardCard for help about building responses
+ */
+
+/*
+
+handle(handlerInput) {
+    const speechText = 'Here is your logo test!';
+    return handlerInput.responseBuilder
+        .speak(speechText)
+        .withStandardCard('Logo', 'Here is the Limesoda Logo:', url, url)
+        .getResponse();
+},*/
