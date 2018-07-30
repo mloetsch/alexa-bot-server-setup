@@ -13,3 +13,25 @@ export const GetLogoHandler = {
             .getResponse();
     },
 };
+
+
+/* alternatively return a JSON object like the "testResponse" below directly from the handle function above inside the Handler
+    see https://developer.amazon.com/de/docs/custom-skills/include-a-card-in-your-skills-response.html
+    and https://ask-sdk-for-nodejs.readthedocs.io/en/latest/Response-Building.html?highlight=withStandardCard for help about building responses
+*/
+let testResponse = {
+    "outputSpeech": {
+        "type": "PlainText",
+        "text": "Subtext test test test!"
+    },
+    "card": {
+        "type": "Standard",
+        "title": "Title of the Card",
+        "text": "Here is your Logo",
+        "image": {
+            "smallImageUrl": url,
+            "largeImageUrl": url
+        }
+    }
+};
+
