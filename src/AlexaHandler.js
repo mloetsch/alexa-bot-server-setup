@@ -9,11 +9,13 @@ import {
 } from './intents/default';
 import {HelloWorldHandler} from './intents/helloworld';
 import {GetLogoHandler} from './intents/getlogo';
+import {GetGoogleImageHandler} from './intents/getgoogleimage';
 
 let skill = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         HelloWorldHandler,
         GetLogoHandler,
+        GetGoogleImageHandler,
         LaunchRequestHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
