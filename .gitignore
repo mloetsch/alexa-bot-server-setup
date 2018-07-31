@@ -61,8 +61,8 @@ typings/
 .next
 
 # build/dist folder
-dist
+dist/
 
-.idea
+.idea/
 
 notes.md
