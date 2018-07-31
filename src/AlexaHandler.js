@@ -24,20 +24,12 @@ let skill = Alexa.SkillBuilders.custom()
     )
     .create();
 
-export default function AlexaHandler (req, res){
-/*    try {
+export default async function AlexaHandler (req, res){
+    try {
         let responseBody = await skill.invoke(req.body);
+        res.json(responseBody);
     } catch (error) {
         console.log(error);
         res.status(500).send('Error during the request');
-    }*/
-
-    skill.invoke(req.body)
-        .then(function (responseBody) {
-            res.json(responseBody);
-        })
-        .catch(function (error) {
-            console.log(error);
-            res.status(500).send('Error during the request');
-        });
+    }
 };
