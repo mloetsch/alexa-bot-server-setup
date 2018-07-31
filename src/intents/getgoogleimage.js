@@ -32,6 +32,7 @@ let testResponse = {
 };
 
 let customSearch = {
+    // replace with your own google custom search api key and search engine ID
     apiKey : myApi.apiKey,
     seId : myApi.seId,
     searchQuery: 'limesoda',
