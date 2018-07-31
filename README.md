@@ -55,4 +55,4 @@ more scripts:
 
 ## License
 
-[GNU](./LICENSE)
+[GPL-3.0](./LICENSE)
