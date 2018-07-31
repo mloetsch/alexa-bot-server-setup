@@ -62,3 +62,7 @@ typings/
 
 # build/dist folder
 dist
+
+.idea
+
+notes.md
