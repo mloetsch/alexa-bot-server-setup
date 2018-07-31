@@ -34,8 +34,8 @@ let testResponse = {
 let customSearch = {
     apiKey : myApi.apiKey,
     seId : myApi.seId,
-    searchQuery: 'chicken',
-    url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyADdqCpiDM1UEgdq0fcNSxF8fExx5Qhi_E&cx=003811576608300304863:ojbt8aafuuq&defaultToImageSearch=true&q=chicken',
+    searchQuery: 'limesoda',
+    url: 'https://www.googleapis.com/customsearch/v1?key=AIzaSyADdqCpiDM1UEgdq0fcNSxF8fExx5Qhi_E&cx=003811576608300304863:ojbt8aafuuq&defaultToImageSearch=true&q=limesoda',
 
 };
 
@@ -59,4 +59,3 @@ let getImage = async () => {
         console.error(error);
     }
 };
-
