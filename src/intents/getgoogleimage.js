@@ -5,10 +5,11 @@ export const GetGoogleImageHandler = {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
             && handlerInput.requestEnvelope.request.intent.name === 'GetGoogleImageIntent';
     },
-    handle(handlerInput) {
-        let searchQuery = handlerInput.requestEnvelope.request.intent.slots.searchQuery;
-        updateCustomSearch("car");
-        let image = getImage();
+    async handle(handlerInput) {
+        let searchQuery = handlerInput.requestEnvelope.request.intent.slots.searchQuery.value;
+        console.log(searchQuery);
+        updateCustomSearch(searchQuery);
+        let image = await getImage();
         buildResponse(testResponse, image);
         return testResponse;
     },
@@ -59,6 +60,7 @@ let buildResponse = (response, image) => {
 
 let getImage = async () => {
     try {
+        await console.log(customSearch.url);
         const response = await axios.get(customSearch.url);
         if (response && response.data){
             let imageURL = response.data.items[0].pagemap.cse_image[0].src;
